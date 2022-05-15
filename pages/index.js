@@ -1,8 +1,8 @@
-import { BsFilterRight } from 'react-icons/bs'
 import { useEffect, useState } from 'react'
 import Item from '../components/Item'
 import { useAppContext } from '../components/Warper'
 import Filter from '../components/Filter'
+import Head from 'next/head'
 
 const allData = null
 
@@ -84,6 +84,10 @@ let style1 = 'm-4 p-1 border-b-2 transition-all ease-in-out duration-500 cursor-
 
   return (
     <div className=' overflow-scroll'>
+      <Head>
+        <title> Edvora || task</title>
+        <link rel="shortcut icon" href="https://media.glassdoor.com/sqll/6459521/edvora-squarelogo-1647587142659.png" />
+      </Head>
       <div className="flex justify-between text-xl  ">
         <div className='flex mx-5  '>
           <div className={style1 + handleActive('N')} onClick={()=>{setData(allData), setActive('N') }}>Nearest rides</div>
